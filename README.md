@@ -41,7 +41,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 	
 5.	Run the script using following command in R / R studio. n case of successful run script prompts the location of generated 2 x result files i.e Tidy data for Task1:4 and averages data for Task5.   , , 
 
-	`source("run_analysis.R")`
+	`source("run_analysis.R")`    
+	
 	*Note : This script and method is tested using Rstudio and R on windows7, and Ubuntu 12.04 , On windows with R some times "plyr" and "reshape2" packages give error if you have special configuration for installing additional R packages. In such cases please refer to following solution.  
 	  http://stackoverflow.com/questions/12861014/problems-installing-r-packages   
 	  The script however needs running "plyr" and "reshape2" packages.
