@@ -22,7 +22,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Running the script:
 
 1.  clone this repo using following in gitbash / terminal
-	´git clone https://github.com/hazznain/getting_and_cleaning_data.git´
+	`git clone https://github.com/hazznain/getting_and_cleaning_data.git`
 	
 2. 
 	
