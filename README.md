@@ -1,7 +1,7 @@
 Getting and cleaning_data
 =========================
 
-For the course assignment of John Hopkin University course "Getting and Cleaning Data" on coursera
+For the course assignment of John Hopkin University course "Getting and Cleaning Data" on Coursera
 
 ## Task:
 One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
@@ -29,11 +29,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-3.	Open R or R studio and set working directory to cloned repo directory using follwoing withing the console.  
+3.	Open R or R studio and set working directory to cloned repo directory using following within the console.  
 	
 	`setwd("<Path on your system>/getting_and_cleaning_data/")`
 	
-4.  Optional step : If you have not already installed following plyr, sqldf and reshape2 pacages in R then install them using .  
+4.  Optional step : If you have not already installed "plyr", "sqldf" and "reshape2" packages in R then install them using .  
 
 	`install.packages("reshape2")`  
 	`install.packages("plyr")`  
@@ -42,8 +42,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 5.	Run the script using following command in R / R studio. n case of successful run script prompts the location of generated 2 x result files i.e Tidy data for Task1:4 and averages data for Task5.   , , 
 
 	`source("run_analysis.R")`
-	*Note : This script and method is tested using Rstudio and R on windows7, and ubuntu 12.04 , On windows with R some times "plyr" and "reshape2" packages give error if you have special some configuration for installing additional R packages. In such cases please refer to following solution.  
-	  http://stackoverflow.com/questions/12861014/problems-installing-r-packages
+	*Note : This script and method is tested using Rstudio and R on windows7, and Ubuntu 12.04 , On windows with R some times "plyr" and "reshape2" packages give error if you have special configuration for installing additional R packages. In such cases please refer to following solution.  
+	  http://stackoverflow.com/questions/12861014/problems-installing-r-packages   
 	  The script however needs running "plyr" and "reshape2" packages.
 	
 	
