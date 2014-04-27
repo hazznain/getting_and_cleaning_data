@@ -67,7 +67,7 @@ tidy_data <- function(directory= dir_path,dataset = "test") {
 }
 # acquiring the required libararies
 library(plyr)
-library(rehape)
+library(reshape2)
 
 
 test_data <- tidy_data()                        # collecting the preprocessed tidy test data
