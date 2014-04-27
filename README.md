@@ -21,8 +21,26 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## Running the script:
 
-1.  clone this repo using following in gitbash / terminal
+1.  clone this repo using following in gitbash / terminal , , 
+
 	`git clone https://github.com/hazznain/getting_and_cleaning_data.git`
 	
-2. 
+2.	Download the data using following link into cloned repo directory and uncompress it within that directory so that "UCI HAR Dataset" is in the main repo directory along with script file "run_analysis.R"  , , 
+
+	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+3.	Open R or R studio and set working directory to cloned repo directory using follwoing withing the console. , , 
+	
+	`setwd("<Path on your system>/getting_and_cleaning_data/"`
+	
+4.  Optional step : If you have not already installed following plyr, sqldf and reshape2 pacages in R then install them using  , , 
+
+	`install.packages("reshape2")`
+	`install.packages("plyr")`
+	`install.packages("sqldf")`
+	
+5.	Run the script using following command in R / R studio. n case of successful run script prompts the location of generated 2 x result files i.e Tidy data for Task1:4 and averages data for Task5.   , , 
+
+	`source("run_analysis.R")`
+	
 	
