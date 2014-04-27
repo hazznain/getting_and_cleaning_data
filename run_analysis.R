@@ -11,21 +11,21 @@ tidy_data <- function(directory= dir_path,dataset = "test") {
                 # loading sqldf for later use 
                 require(sqldf)
 				
-				# preparing file path to access target files inside main data director
-				# file path for X_test.txt or X_train depending on dataset parameter in function call
+		# preparing file path to access target files inside main data director
+		# file path for X_test.txt or X_train depending on dataset parameter in function call
                 filename_x <- paste(directory,"/",dataset,"/X_",dataset,".txt", sep="")
 				
                 # file path for y_test.txt or y_train depending on dataset parameter in function call
-				filename_y <- paste(directory,"/",dataset,"/y_",dataset,".txt", sep="")
+		filename_y <- paste(directory,"/",dataset,"/y_",dataset,".txt", sep="")
                 
-				#Reading the list of features to be used as column names for data set
-				head_file <- read.table(paste(directory,"/","features.txt",sep=""))
+		#Reading the list of features to be used as column names for data set
+		head_file <- read.table(paste(directory,"/","features.txt",sep=""))
                 
-				#Reading the list of subject cases depending on data set
-				filename_sub <- paste(directory,"/",dataset,"/subject_",dataset,".txt", sep="")
+		#Reading the list of subject cases depending on data set
+		filename_sub <- paste(directory,"/",dataset,"/subject_",dataset,".txt", sep="")
                 
-				#Reading the data file and setting the respective column names
-				data_head <- head_file[,2]   
+		#Reading the data file and setting the respective column names
+		data_head <- head_file[,2]   
                 data <- read.table (file= filename_x,header=FALSE)
                 names(data) <- data_head
                 
@@ -36,13 +36,13 @@ tidy_data <- function(directory= dir_path,dataset = "test") {
                 col_index <- i[,1]
                 data <- data [,col_index]
                 
-				# Reading the activity description and subject list 
-				act_list <- read.table(file= filename_y)
+		# Reading the activity description and subject list 
+		act_list <- read.table(file= filename_y)
                 sub_list <- read.table(file= filename_sub)
                 colnames(act_list)[1] <- "Activity"
                 colnames(sub_list)[1] <- "Subject"
                 
-				# Inserting the activity description according to activity codes in the activity data set
+		# Inserting the activity description according to activity codes in the activity data set
                 act_list <- transform(act_list, ActivityDetail = 
                                             ifelse(act_list$Activity == 1, "WALKING",
                                                    ifelse (act_list$Activity  == 2, "WALKING_UPSTAIRS",
