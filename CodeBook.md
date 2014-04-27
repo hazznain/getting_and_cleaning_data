@@ -46,7 +46,7 @@ tidy_data() is called twice, once to get test data and second to get training da
 ### Finalizing Task5, The Average Aggregation   
 to calculate and project average measurements for each subject doing each activity. melt() function was used to get the measurement as variable for subject and activities. Then dcast() to aggregate and reshape data in a form that each subject activities list in from of it with respective averages of all measurements. Total of 180 rows explain 30 subject X 6 activities each. Just before sending it to write output file the labels of the casted data frame were modified to make it tidy.
 ###### Variables in Averages data set
-``
+<sub><small>
 [1] "Subject"                            "ActivityDescription"                "avg_of_tBodyAcc-mean()-X"          
  [4] "avg_of_tBodyAcc-mean()-Y"           "avg_of_tBodyAcc-mean()-Z"           "avg_of_tBodyAcc-std()-X"           
  [7] "avg_of_tBodyAcc-std()-Y"            "avg_of_tBodyAcc-std()-Z"            "avg_of_tGravityAcc-mean()-X"       
@@ -70,7 +70,7 @@ to calculate and project average measurements for each subject doing each activi
 [61] "avg_of_fBodyAccMag-mean()"          "avg_of_fBodyAccMag-std()"           "avg_of_fBodyBodyAccJerkMag-mean()" 
 [64] "avg_of_fBodyBodyAccJerkMag-std()"   "avg_of_fBodyBodyGyroMag-mean()"     "avg_of_fBodyBodyGyroMag-std()"     
 [67] "avg_of_fBodyBodyGyroJerkMag-mean()" "avg_of_fBodyBodyGyroJerkMag-std()" 
-``
+</small></sub>
 
 
 ### Writing the output files
