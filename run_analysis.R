@@ -1,7 +1,10 @@
+
+# Setting the directory path for passing to tidy_data function 
 wd <-getwd()
 dir_path <- paste(wd,"/UCI HAR Dataset",sep="")
 
-tidy_data <- function(directory= dir_path,dataset = "test", avgs = FALSE) {
+
+tidy_data <- function(directory= dir_path,dataset = "test") {
                 
                 require(sqldf)
                 filename_x <- paste(directory,"/",dataset,"/X_",dataset,".txt", sep="")
@@ -41,6 +44,10 @@ tidy_data <- function(directory= dir_path,dataset = "test", avgs = FALSE) {
                 data
             
 }
+
+library(plyr)
+library(rehape)
+
 test_data <- tidy_data()
 train_data <- tidy_data(dataset="train")
 merged <- merge(train_data,test_data,all=TRUE)

@@ -35,9 +35,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 	
 4.  Optional step : If you have not already installed following plyr, sqldf and reshape2 pacages in R then install them using  , , 
 
-	`install.packages("reshape2")`
-	`install.packages("plyr")`
-	`install.packages("sqldf")`
+	`install.packages("reshape2")`  
+	`install.packages("plyr")`  
+	`install.packages("sqldf")`  
 	
 5.	Run the script using following command in R / R studio. n case of successful run script prompts the location of generated 2 x result files i.e Tidy data for Task1:4 and averages data for Task5.   , , 
 
