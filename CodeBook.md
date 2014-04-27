@@ -24,12 +24,56 @@ Processing involves taking feature label from features.txt and labelling respect
 
 ### Finalizing Task1:4, The Tidy Dataset
 tidy_data() is called twice, once to get test data and second to get training data. Then both data frames were merged together. Before sending it to write as output file subject details were removed as it was not required as per task requirement. The original merged data frame was also preserved to be used for task5.
+###### Variables in Tidy Data Set
+[1] "ActivityDescription"         "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"           "tBodyAcc-mean()-Z"          
+ [5] "tBodyAcc-std()-X"            "tBodyAcc-std()-Y"            "tBodyAcc-std()-Z"            "tGravityAcc-mean()-X"       
+ [9] "tGravityAcc-mean()-Y"        "tGravityAcc-mean()-Z"        "tGravityAcc-std()-X"         "tGravityAcc-std()-Y"        
+[13] "tGravityAcc-std()-Z"         "tBodyAccJerk-mean()-X"       "tBodyAccJerk-mean()-Y"       "tBodyAccJerk-mean()-Z"      
+[17] "tBodyAccJerk-std()-X"        "tBodyAccJerk-std()-Y"        "tBodyAccJerk-std()-Z"        "tBodyGyro-mean()-X"         
+[21] "tBodyGyro-mean()-Y"          "tBodyGyro-mean()-Z"          "tBodyGyro-std()-X"           "tBodyGyro-std()-Y"          
+[25] "tBodyGyro-std()-Z"           "tBodyGyroJerk-mean()-X"      "tBodyGyroJerk-mean()-Y"      "tBodyGyroJerk-mean()-Z"     
+[29] "tBodyGyroJerk-std()-X"       "tBodyGyroJerk-std()-Y"       "tBodyGyroJerk-std()-Z"       "tBodyAccMag-mean()"         
+[33] "tBodyAccMag-std()"           "tGravityAccMag-mean()"       "tGravityAccMag-std()"        "tBodyAccJerkMag-mean()"     
+[37] "tBodyAccJerkMag-std()"       "tBodyGyroMag-mean()"         "tBodyGyroMag-std()"          "tBodyGyroJerkMag-mean()"    
+[41] "tBodyGyroJerkMag-std()"      "fBodyAcc-mean()-X"           "fBodyAcc-mean()-Y"           "fBodyAcc-mean()-Z"          
+[45] "fBodyAcc-std()-X"            "fBodyAcc-std()-Y"            "fBodyAcc-std()-Z"            "fBodyAccJerk-mean()-X"      
+[49] "fBodyAccJerk-mean()-Y"       "fBodyAccJerk-mean()-Z"       "fBodyAccJerk-std()-X"        "fBodyAccJerk-std()-Y"       
+[53] "fBodyAccJerk-std()-Z"        "fBodyGyro-mean()-X"          "fBodyGyro-mean()-Y"          "fBodyGyro-mean()-Z"         
+[57] "fBodyGyro-std()-X"           "fBodyGyro-std()-Y"           "fBodyGyro-std()-Z"           "fBodyAccMag-mean()"         
+[61] "fBodyAccMag-std()"           "fBodyBodyAccJerkMag-mean()"  "fBodyBodyAccJerkMag-std()"   "fBodyBodyGyroMag-mean()"    
+[65] "fBodyBodyGyroMag-std()"      "fBodyBodyGyroJerkMag-mean()" "fBodyBodyGyroJerkMag-std()" 
 
 ### Finalizing Task5, The Average Aggregation   
 to calculate and project average measurements for each subject doing each activity. melt() function was used to get the measurement as variable for subject and activities. Then dcast() to aggregate and reshape data in a form that each subject activities list in from of it with respective averages of all measurements. Total of 180 rows explain 30 subject X 6 activities each. Just before sending it to write output file the labels of the casted data frame were modified to make it tidy.
+###### Variables in Averages data set
+[1] "Subject"                            "ActivityDescription"                "avg_of_tBodyAcc-mean()-X"          
+ [4] "avg_of_tBodyAcc-mean()-Y"           "avg_of_tBodyAcc-mean()-Z"           "avg_of_tBodyAcc-std()-X"           
+ [7] "avg_of_tBodyAcc-std()-Y"            "avg_of_tBodyAcc-std()-Z"            "avg_of_tGravityAcc-mean()-X"       
+[10] "avg_of_tGravityAcc-mean()-Y"        "avg_of_tGravityAcc-mean()-Z"        "avg_of_tGravityAcc-std()-X"        
+[13] "avg_of_tGravityAcc-std()-Y"         "avg_of_tGravityAcc-std()-Z"         "avg_of_tBodyAccJerk-mean()-X"      
+[16] "avg_of_tBodyAccJerk-mean()-Y"       "avg_of_tBodyAccJerk-mean()-Z"       "avg_of_tBodyAccJerk-std()-X"       
+[19] "avg_of_tBodyAccJerk-std()-Y"        "avg_of_tBodyAccJerk-std()-Z"        "avg_of_tBodyGyro-mean()-X"         
+[22] "avg_of_tBodyGyro-mean()-Y"          "avg_of_tBodyGyro-mean()-Z"          "avg_of_tBodyGyro-std()-X"          
+[25] "avg_of_tBodyGyro-std()-Y"           "avg_of_tBodyGyro-std()-Z"           "avg_of_tBodyGyroJerk-mean()-X"     
+[28] "avg_of_tBodyGyroJerk-mean()-Y"      "avg_of_tBodyGyroJerk-mean()-Z"      "avg_of_tBodyGyroJerk-std()-X"      
+[31] "avg_of_tBodyGyroJerk-std()-Y"       "avg_of_tBodyGyroJerk-std()-Z"       "avg_of_tBodyAccMag-mean()"         
+[34] "avg_of_tBodyAccMag-std()"           "avg_of_tGravityAccMag-mean()"       "avg_of_tGravityAccMag-std()"       
+[37] "avg_of_tBodyAccJerkMag-mean()"      "avg_of_tBodyAccJerkMag-std()"       "avg_of_tBodyGyroMag-mean()"        
+[40] "avg_of_tBodyGyroMag-std()"          "avg_of_tBodyGyroJerkMag-mean()"     "avg_of_tBodyGyroJerkMag-std()"     
+[43] "avg_of_fBodyAcc-mean()-X"           "avg_of_fBodyAcc-mean()-Y"           "avg_of_fBodyAcc-mean()-Z"          
+[46] "avg_of_fBodyAcc-std()-X"            "avg_of_fBodyAcc-std()-Y"            "avg_of_fBodyAcc-std()-Z"           
+[49] "avg_of_fBodyAccJerk-mean()-X"       "avg_of_fBodyAccJerk-mean()-Y"       "avg_of_fBodyAccJerk-mean()-Z"      
+[52] "avg_of_fBodyAccJerk-std()-X"        "avg_of_fBodyAccJerk-std()-Y"        "avg_of_fBodyAccJerk-std()-Z"       
+[55] "avg_of_fBodyGyro-mean()-X"          "avg_of_fBodyGyro-mean()-Y"          "avg_of_fBodyGyro-mean()-Z"         
+[58] "avg_of_fBodyGyro-std()-X"           "avg_of_fBodyGyro-std()-Y"           "avg_of_fBodyGyro-std()-Z"          
+[61] "avg_of_fBodyAccMag-mean()"          "avg_of_fBodyAccMag-std()"           "avg_of_fBodyBodyAccJerkMag-mean()" 
+[64] "avg_of_fBodyBodyAccJerkMag-std()"   "avg_of_fBodyBodyGyroMag-mean()"     "avg_of_fBodyBodyGyroMag-std()"     
+[67] "avg_of_fBodyBodyGyroJerkMag-mean()" "avg_of_fBodyBodyGyroJerkMag-std()" 
+
 
 ### Writing the output files
-To avoid rewrite issues in case of script re-run dumping output file in same directory. Output files are with time stamp appended as "%Y-%j-%H%M%S" i.e. year-NumberOfTheDayInYear-HourMinuteSecond. 
+To avoid rewrite issues in case of script re-run dumping output file in same directory. Output files are with time stamp appended as "%Y-%j-%H%M%S" i.e. year-NumberOfTheDayInYear-HourMinuteSecond.
+ 
 
 
   
