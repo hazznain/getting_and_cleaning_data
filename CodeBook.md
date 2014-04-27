@@ -25,6 +25,7 @@ Processing involves taking feature label from features.txt and labelling respect
 ### Finalizing Task1:4, The Tidy Dataset
 tidy_data() is called twice, once to get test data and second to get training data. Then both data frames were merged together. Before sending it to write as output file subject details were removed as it was not required as per task requirement. The original merged data frame was also preserved to be used for task5.
 ###### Variables in Tidy Data Set
+<sub><small>
 [1] "ActivityDescription"         "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"           "tBodyAcc-mean()-Z"          
  [5] "tBodyAcc-std()-X"            "tBodyAcc-std()-Y"            "tBodyAcc-std()-Z"            "tGravityAcc-mean()-X"       
  [9] "tGravityAcc-mean()-Y"        "tGravityAcc-mean()-Z"        "tGravityAcc-std()-X"         "tGravityAcc-std()-Y"        
@@ -42,6 +43,7 @@ tidy_data() is called twice, once to get test data and second to get training da
 [57] "fBodyGyro-std()-X"           "fBodyGyro-std()-Y"           "fBodyGyro-std()-Z"           "fBodyAccMag-mean()"         
 [61] "fBodyAccMag-std()"           "fBodyBodyAccJerkMag-mean()"  "fBodyBodyAccJerkMag-std()"   "fBodyBodyGyroMag-mean()"    
 [65] "fBodyBodyGyroMag-std()"      "fBodyBodyGyroJerkMag-mean()" "fBodyBodyGyroJerkMag-std()" 
+</small></sub>
 
 ### Finalizing Task5, The Average Aggregation   
 to calculate and project average measurements for each subject doing each activity. melt() function was used to get the measurement as variable for subject and activities. Then dcast() to aggregate and reshape data in a form that each subject activities list in from of it with respective averages of all measurements. Total of 180 rows explain 30 subject X 6 activities each. Just before sending it to write output file the labels of the casted data frame were modified to make it tidy.
